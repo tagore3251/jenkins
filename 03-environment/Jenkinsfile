@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    environment {
+        NAME = "Tagore"
+        COURSE = "DevOps With AWS"
+    }
+    stages {
+        stage('environment') {
+            steps {
+                echo "Hello, My Name is ${NAME} ,Iam Learning ${COURSE} Course"
+            }
+        }
+    }
+}
