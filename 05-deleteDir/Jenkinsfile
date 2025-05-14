@@ -1,0 +1,17 @@
+pipeline {
+    agent{
+        label 'AGENT-1'
+    } 
+    stages {
+        stage('deleteDir()') {
+            steps {
+                echo 'Recursively Delete the current directory from WorkSpace'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+            deleteDir()
+    }
+}
