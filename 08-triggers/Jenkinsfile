@@ -1,0 +1,6 @@
+pipeline {
+    agent any
+    triggers {
+        cron('H/5 * * * *') // Checks for changes every 5 minutes
+    }
+}
