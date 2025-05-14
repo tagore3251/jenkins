@@ -3,4 +3,11 @@ pipeline {
     triggers {
         cron('H/5 * * * *') // Checks for changes every 5 minutes
     }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Running the build process...'
+            }
+        }
+    }
 }
