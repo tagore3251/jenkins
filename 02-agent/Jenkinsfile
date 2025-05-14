@@ -1,0 +1,12 @@
+pipeline{
+    agent{
+        label 'AGENT-1'
+    }
+    stages{
+        stage('Agent'){
+            steps{
+                echo 'HELLO FROM AGENT'
+            }
+        }
+    }
+}
