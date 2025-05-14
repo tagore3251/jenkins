@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Post') {
+            steps {
+                echo 'success - Runs only if the pipeline succeeds'
+                echo 'failure - Executes only when the pipeline fails'
+                echo 'always - Runs regardless of the pipeline result'
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+        always {
+            echo 'This runs regardless of success or failure.'
+        }
+    }
+}
